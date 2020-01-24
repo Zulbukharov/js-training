@@ -6,7 +6,11 @@
  * Like the method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
  * Of course you may not use the method directly
  *
- */
+*/
+
+const r = (s, n, f) => n > 0 ? r(s, n - 1, f + s) : f
+
+const repeat = (s, n) => r(s, n, '')
 
 //* Begin of tests
 const assert = require('assert')

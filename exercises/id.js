@@ -8,6 +8,8 @@
 
 // Your code :
 
+const id = i => i
+
 //* Begin of tests
 const assert = require('assert')
 

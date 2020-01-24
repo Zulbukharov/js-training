@@ -4,8 +4,11 @@
  * Create a `sentence` function that takes an array of strings
  * and return a string of all the element separated by a space
  *
- */
+*/
 
+const r = (s, l, f, c) => c < l ? r(s, l, f + `${s[c]}` + (c + 1 == l ? '': ' '), c + 1) : f
+
+const sentence = s => r(s, s.length, '', 0)
 
 //* Begin of tests
 const assert = require('assert')

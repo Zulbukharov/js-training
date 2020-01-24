@@ -9,6 +9,11 @@
 
 // Your code :
 
+const sign = n => n > 0 ? 1 : n === 0 ? 0 : -1 
+
+const sameSign = (a, b) => sign(a) === sign(b)
+
+
 //* Begin of tests
 const assert = require('assert')
 

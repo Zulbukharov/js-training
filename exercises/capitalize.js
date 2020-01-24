@@ -5,8 +5,9 @@
  * and transforms it to upper case only for the first letter,
  * and in lowercase for the rest of the string
  *
- */
+*/
 
+const capitalize = s => s[0].toUpperCase() + s.slice(1, s.length).toLowerCase()
 
 //* Begin of tests
 const assert = require('assert')
