@@ -10,6 +10,14 @@
 
 // Your code :
 
+const r = (a, b, s) => b > 0 ? r(a, b - 1, s + a) : s
+
+const abs = a => a > 0 ? a : +(-a)
+
+const isNegative = a => a < 0
+
+const multiply = (a, b) => isNegative(a) && isNegative(b) ? r(abs(a), abs(b), 0) : (isNegative(a) || isNegative(b)) && (a !== 0 && b !== 0) ? -r(abs(a), abs(b), 0) : r(abs(a), abs(b), 0)
+
 //* Begin of tests
 const assert = require('assert')
 
